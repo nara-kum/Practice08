@@ -1,0 +1,54 @@
+
+    	for(int i=0; i<cArray.length; i++) {
+    		if(cArray[i]=='+') {
+    			String[] eq01 = eq.split("\\+");
+    			
+				a = Integer.parseInt(eq01[0]);
+				b = Integer.parseInt(eq01[1]);
+
+    			//계산할 클래스 메모리에 올려
+				Add add = new Add();
+				add.setValue(a,b);
+    			System.out.println(add.calculate());
+    			
+    		}else if(cArray[i]=='-') {
+    			String[] eq02 = eq.split("\\-");
+    			
+				a = Integer.parseInt(eq02[0]);
+				b = Integer.parseInt(eq02[1]);
+				
+    			//계산할 클래스 메모리에 올려
+				Sub sub = new Sub();
+				sub.setValue(a,b);
+    			System.out.println(sub.calculate());
+    			
+    		}else if(cArray[i]=='/') {
+    			String[] eq03 = eq.split("\\/");
+    			
+				a = Integer.parseInt(eq03[0]);
+				b = Integer.parseInt(eq03[1]);
+				
+    			//계산할 클래스 메모리에 올려
+				Div div = new Div();
+				div.setValue(a,b);
+    			System.out.println(div.calculate());
+    			
+    		}else if(cArray[i]=='*') {
+    			String[] eq04 = eq.split("\\*");
+    			
+				a = Integer.parseInt(eq04[0]);
+				b = Integer.parseInt(eq04[1]);
+				
+    			//계산할 클래스 메모리에 올려
+				Mul mul = new Mul();
+				mul.setValue(a,b);
+    			System.out.println(mul.calculate());
+    			
+    		}
+//    		else if(cArray[i]=='q') {
+//    			System.out.println("종료합니다.");
+//    		}
+    		else {
+//    			System.out.println("알 수 없는 연산입니다.");
+    		}
+    	}
